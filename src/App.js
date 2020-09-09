@@ -3,26 +3,31 @@ import "./App.css";
 import axios from "axios";
 import { BASE_URL, API_KEY } from "./constants/index";
 import ProfileCard from "./ProfileCard";
+import Title from "./Title";
+import Explanation from "./Explanation";
 
 function App() {
   const [nasaInfo, setNasaInfo] = useState([]);
   // const [title, setTitle] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`${BASE_URL}api_key=${API_KEY}`)
-  //     .then((res) => {
-  //       setNasaInfo(res.data);
-  //       console.log("yep", nasaInfo);
-  //     })
-  //     .catch((err) => {
-  //       console.log("you have an error with fetching nasaPic", err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}api_key=${API_KEY}`)
+      // .get(`https://api.nasa.gov/planetary/apod?`)
+      .then((res) => {
+        setNasaInfo(res.data);
+      })
+      .catch((err) => {
+        console.log("you have an error with fetching nasaInfo", err);
+      });
+  }, []);
+
+  // console.log("nasaExp", nasaInfo.explanation);
 
   return (
     <div className="App">
-      <h1>My Title:</h1>
+      <Title title={nasaInfo.title} />
+      {/* <h1 className="header-title">My Title:{nasaInfo.title}</h1> */}
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun{" "}
@@ -32,6 +37,7 @@ function App() {
         !
       </p>
       <ProfileCard nasaPic={nasaInfo.url} />
+      <Explanation description={nasaInfo.explanation} />
     </div>
   );
 }
