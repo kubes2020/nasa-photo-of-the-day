@@ -30,6 +30,10 @@ const StyledProfileCardBox = styled.div`
     font-size: 4rem;
     transform: scale(0.1);
     animation: ${kf} 1.5s forwards;
+    &:hover {
+      color: #888;
+      }
+    }
   }
 `;
 

@@ -21,7 +21,7 @@ function App() {
       });
   }, []);
 
-  console.log(nasaInfo);
+  // console.log(nasaInfo);
 
   return (
     <div className="App">
