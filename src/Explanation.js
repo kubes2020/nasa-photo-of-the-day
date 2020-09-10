@@ -9,7 +9,7 @@ const StyledExplanation = styled.p`
   padding-top: 3%;
   line-height: 1.5;
   text-align: justify;
-  text-shadow: 1px 1px 3px #f76030;
+  text-shadow: 1px 1px 2px #8bbbd2;
 `;
 
 export default function Explanation({ description }) {

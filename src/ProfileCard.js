@@ -24,6 +24,7 @@ const StyledProfileCardBox = styled.div`
     height: auto;
     opacity: 0.2;
     animation: ${kf} 2s forwards;
+    box-shadow: 4px 4px 4px grey;
   }
   h1 {
     font-size: 4rem;
@@ -34,7 +35,6 @@ const StyledProfileCardBox = styled.div`
 
 export default function ProfileCard(props) {
   const { nasaInfo } = props;
-  console.log("props", nasaInfo);
   return (
     <StyledProfileCardBox>
       <h1>{nasaInfo.title}</h1>

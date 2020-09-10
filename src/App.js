@@ -5,11 +5,10 @@ import { BASE_URL, API_KEY } from "./constants/index";
 import ProfileCard from "./ProfileCard";
 import Explanation from "./Explanation";
 import styled, { keyframes } from "styled-components";
+import Footer from "./Footer";
 
 function App() {
   const [nasaInfo, setNasaInfo] = useState([]);
-  const [title, setTitle] = useState([]);
-
   useEffect(() => {
     axios
       .get(`${BASE_URL}api_key=${API_KEY}`)
@@ -22,6 +21,8 @@ function App() {
       });
   }, []);
 
+  console.log(nasaInfo);
+
   return (
     <div className="App">
       <header>Nasa Pic Of The Day</header>
@@ -30,6 +31,9 @@ function App() {
       </div>
       <div>
         <Explanation description={nasaInfo.explanation} />
+      </div>
+      <div>
+        <Footer nasaInfo={nasaInfo} />
       </div>
     </div>
   );
