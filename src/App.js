@@ -10,17 +10,17 @@ function App() {
   const [nasaInfo, setNasaInfo] = useState([]);
   // const [title, setTitle] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(`${BASE_URL}api_key=${API_KEY}`)
-      // .get(`https://api.nasa.gov/planetary/apod?`)
-      .then((res) => {
-        setNasaInfo(res.data);
-      })
-      .catch((err) => {
-        console.log("you have an error with fetching nasaInfo", err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(`${BASE_URL}api_key=${API_KEY}`)
+  //     // .get(`https://api.nasa.gov/planetary/apod?`)
+  //     .then((res) => {
+  //       setNasaInfo(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log("you have an error with fetching nasaInfo", err);
+  //     });
+  // }, []);
 
   // console.log("nasaExp", nasaInfo.explanation);
 
