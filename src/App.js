@@ -3,7 +3,6 @@ import "./App.css";
 import axios from "axios";
 import { BASE_URL, API_KEY } from "./constants/index";
 import ProfileCard from "./ProfileCard";
-
 import Explanation from "./Explanation";
 import styled, { keyframes } from "styled-components";
 
@@ -23,12 +22,9 @@ function App() {
       });
   }, []);
 
-  console.log("nasaExp", nasaInfo.explanation);
-
   return (
     <div className="App">
-      {/* <Title title={nasaInfo.title} /> */}
-
+      <header>Nasa Pic Of The Day</header>
       <div>
         <ProfileCard nasaInfo={nasaInfo} />
       </div>
