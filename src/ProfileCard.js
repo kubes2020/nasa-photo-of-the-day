@@ -1,7 +1,19 @@
 import React from "react";
 import "./App.css";
 import styled, { keyframes } from "styled-components";
-import Title from "./Title";
+// import Title from "./Title";
+const kf = keyframes`
+  50%{
+    opacity: .9;
+  }
+  80%{
+    opacity: .7;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
 
 const StyledProfileCardBox = styled.div`
   width: 80%;
@@ -10,9 +22,13 @@ const StyledProfileCardBox = styled.div`
   img {
     width: 100%;
     height: auto;
+    opacity: 0.2;
+    animation: ${kf} 2s forwards;
   }
-  h2 {
-    font-size: 3rem;
+  h1 {
+    font-size: 4rem;
+    transform: scale(0.1);
+    animation: ${kf} 1.5s forwards;
   }
 `;
 
@@ -21,7 +37,7 @@ export default function ProfileCard(props) {
   console.log("props", nasaInfo);
   return (
     <StyledProfileCardBox>
-      <h2>{nasaInfo.title}</h2>
+      <h1>{nasaInfo.title}</h1>
       <img src={nasaInfo.url} alt={nasaInfo.title} />
     </StyledProfileCardBox>
   );
