@@ -1,5 +1,6 @@
 // theme object here
 export default {
+  // color for Explanation text-shadow
   primaryColor: "#8bbbd2",
   secondaryColor: "crimson",
   tertiaryColor: "mediumseagreen",
