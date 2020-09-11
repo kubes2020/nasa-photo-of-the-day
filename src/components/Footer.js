@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
-import styled, { keyframes } from "styled-components";
+// import "./App.css";
+import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   font-family: sans-serif;

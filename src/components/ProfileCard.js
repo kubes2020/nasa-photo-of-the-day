@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+// import "./App.css";
 import styled, { keyframes } from "styled-components";
 const kf = keyframes`
   50%{

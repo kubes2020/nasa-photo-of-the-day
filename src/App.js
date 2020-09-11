@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import { BASE_URL, API_KEY } from "./constants/index";
-import ProfileCard from "./ProfileCard";
-import Explanation from "./Explanation";
+import ProfileCard from "./components/ProfileCard";
+import Explanation from "./components/Explanation";
 import styled, { keyframes } from "styled-components";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 function App() {
   const [nasaInfo, setNasaInfo] = useState([]);

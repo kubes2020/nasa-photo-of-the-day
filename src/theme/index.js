@@ -1,6 +1,6 @@
 // theme object here
 export default {
-  primaryColor: "royalblue",
+  primaryColor: "#8bbbd2",
   secondaryColor: "crimson",
   tertiaryColor: "mediumseagreen",
   white: "white",
