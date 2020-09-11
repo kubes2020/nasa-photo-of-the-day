@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import styled, { keyframes } from "styled-components";
-// import Title from "./Title";
 const kf = keyframes`
   50%{
     opacity: .9;
@@ -26,13 +25,13 @@ const StyledProfileCardBox = styled.div`
     animation: ${kf} 2s forwards;
     box-shadow: 4px 4px 4px grey;
   }
+
   h1 {
     font-size: 4rem;
     transform: scale(0.1);
     animation: ${kf} 1.5s forwards;
     &:hover {
       color: #888;
-      }
     }
   }
 `;
