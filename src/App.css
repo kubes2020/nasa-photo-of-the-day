@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+header {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: white;
+  background: linear-gradient(red, yellow);
+  padding: 1.7%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
